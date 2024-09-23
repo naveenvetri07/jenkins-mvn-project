@@ -13,7 +13,7 @@ pipeline {
                                sh 'mvn clean package'
                             }
 			}
-			stages('execute') {
+			stage ('execute') {
                             steps {
                                echo "Executing the build to get the output for maven project"
                                bat 'java -jar target/MavenProject-0.0.1-SNAPSHOT.jar'
